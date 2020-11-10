@@ -1,3 +1,4 @@
+import  java.util.Scanner;
 
 public class OctalToHexadecimal {
     public static void main(String[] args) {
@@ -21,6 +22,17 @@ public class OctalToHexadecimal {
         System.out.println("..............................:N$$$$V....................................................");
         System.out.println("..............................V$$$$N*....................................................");
         System.out.println("..............................VIIIIV.....................................................");
+
+        String octal_num, hex_num;
+        int decnum;
+        Scanner in = new Scanner(System.in);
+        System.out.print("Ingrese numero Octal : ");
+        octal_num = in.nextLine();
+
+        decnum = Integer.parseInt(octal_num,8);
+        hex_num = Integer.toHexString(decnum);
+
+        System.out.print("El numero hexadecimal es : " + hex_num);
 
     }
 }
