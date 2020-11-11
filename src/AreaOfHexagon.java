@@ -1,24 +1,18 @@
 import java.util.Scanner;
 
-public class SumOfDigits {
+public class AreaOfHexagon {
     public static void main(String[] args)
     {
         Watermark_BPS();
         Scanner input = new Scanner(System.in);
-        System.out.print("Ingrese el numero entero : ");
-        long n = input.nextLong();
-        System.out.println("La suma de los digitos : " + sumDigits(n));
+        System.out.println("Ingrese la longitud de un lado del hexagono : ");
+        double s = input.nextDouble();
+        System.out.println("El area del hexagono es : "+ hexagonArea(s)+"\n");
     }
 
-    public static int sumDigits(long n)
+    public static double hexagonArea(double s)
     {
-        int sum = 0;
-        while(n!=0)
-        {
-            sum += n%10;
-            n /= 10;
-        }
-        return sum;
+        return (6*(s*s))/(4*Math.tan(Math.PI/6));
     }
 
     public static void Watermark_BPS()
